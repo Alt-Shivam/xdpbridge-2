@@ -55,7 +55,7 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/xdpbridge_kern.ll
     COMMAND ${CLANG_COMPILER}
     ${KERNELINCLUDE} ${KERNELDEF}  -include ${KERNEL_TOP}/include/linux/kconfig.h -include asm_goto_workaround.h
     -O2
-    -Wno-unused-value -Wno-pointer-sign -Wno-compare-distinct-pointer-types -Wno-gnu-variable-sized-type-not-at-end -Wno-tautological-compare -Wno-unknown-warning-option -Wno-address-of-packed-member
+    -Wno-unused-but-set-variable -Wno-pointer-sign -Wno-compare-distinct-pointer-types -Wno-gnu-variable-sized-type-not-at-end -Wno-tautological-compare -Wno-unknown-warning-option -Wno-address-of-packed-member
     -S -emit-llvm -c ${CMAKE_CURRENT_SOURCE_DIR}/xdpbridge_kern.c
     -o ${CMAKE_CURRENT_BINARY_DIR}/xdpbridge_kern.ll
     DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/xdpbridge_kern.c
