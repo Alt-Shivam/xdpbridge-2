@@ -101,7 +101,8 @@ target_link_libraries(xdpbridge_user_object
     ## ${KERNEL_TOP}/tools/lib/bpf/str_error.o
     #PUBLIC ${KERNEL_TOP}/tools/lib/bpf/nlattr.o
     #PUBLIC ${KERNEL_TOP}/tools/lib/bpf/libbpf.o
-    PUBLIC ${KERNEL_TOP}/tools/lib/bpf/libbpf.a
+    #PUBLIC ${KERNEL_TOP}/tools/lib/bpf/libbpf.a
+		PUBLIC bpf
     PUBLIC elf
     )
 
