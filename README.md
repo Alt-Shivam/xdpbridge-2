@@ -49,15 +49,15 @@ Build prerequisites
 
 Install prerequisites
 ---------------------
-`sudo apt install clang llvm libelf-dev libpcap-dev gcc-multilib build-essential`
-`sudo apt install linux-perf`
-`sudo apt install linux-tools-$(uname -r)`
-`sudo apt install linux-headers-$(uname -r)`
-`sudo apt install linux-tools-common linux-tools-generic`
+`sudo apt install clang llvm libelf-dev libpcap-dev gcc-multilib build-essential`  
+`sudo apt install linux-perf`  
+`sudo apt install linux-tools-$(uname -r)`  
+`sudo apt install linux-headers-$(uname -r)`  
+`sudo apt install linux-tools-common linux-tools-generic`  
 `sudo apt install cmake`
 
 Build procedure
 ---------------
-cmake -DKERNEL_TOP=/path/to/kernel/tree . && make
-e.g In my case
+cmake -DKERNEL_TOP=/path/to/kernel/tree . && make  
+e.g In my case  
 `cmake -DKERNEL_TOP=/usr/src/linux-headers-5.15.0-58-generic/ . && make`
